@@ -1,11 +1,591 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+const navItems = [
+  { label: "About", href: "#about" },
+  { label: "Experience", href: "#experience" },
+  { label: "Projects & Systems", href: "#projects" },
+  { label: "Research", href: "#research" },
+  { label: "Publications", href: "#publications" },
+  { label: "Skills", href: "#skills" },
+  { label: "Contact", href: "#contact" },
+];
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const experience = [
+  {
+    period: "2025 – Present",
+    title: "Data-driven Product Specialist",
+    org: "RevitUp",
+    description:
+      "Focused on analytics systems, reporting workflows, product-oriented data design, and decision-support tooling.",
+  },
+  {
+    period: "2023 – 2025",
+    title: "Junior Data Analyst",
+    org: "RevitUp",
+    description:
+      "Worked across business intelligence, dashboard development, system optimization, reporting logic, and cross-functional data operations.",
+  },
+  {
+    period: "Ongoing",
+    title: "PhD Researcher in Physics",
+    org: "Aristotle University of Thessaloniki",
+    description:
+      "Research in solid-state physics, fulleride materials, high-pressure studies, and Raman spectroscopy.",
+  },
+];
+
+const projects = [
+  {
+    title: "Analytics Platforms",
+    text: "Design and optimization of reporting environments, business logic, and user-facing analytics structures.",
+  },
+  {
+    title: "Dashboards & BI Systems",
+    text: "Development of metric frameworks, visualization logic, and decision-support dashboards for operational use.",
+  },
+  {
+    title: "Forecasting & Data Workflows",
+    text: "Exploration of forecasting architecture, metric modeling, and structured data pipelines for scalable reporting.",
+  },
+  {
+    title: "Scientific Research Systems Thinking",
+    text: "Application of analytical rigor from physics research to complex data and platform design problems.",
+  },
+];
+
+const skills = [
+  "Data Analysis",
+  "Business Intelligence",
+  "Data Platforms",
+  "System Design",
+  "Python",
+  "SQL",
+  "APIs",
+  "Dashboards",
+  "Scientific Research",
+  "Raman Spectroscopy",
+  "Data Visualization",
+  "Analytics Workflows",
+];
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Anastasia Terzidou</title>
+    <meta
+      name="description"
+      content="Personal website of Anastasia Terzidou — Data & Analytics Specialist | Data Platforms & System Design | PhD Physics"
+    />
+    <style>
+      :root {
+        --bg: #f7f5f2;
+        --surface: #ffffff;
+        --text: #1f2933;
+        --muted: #5b6470;
+        --line: #e8e1d8;
+        --primary: #5577b6;
+        --secondary: #7db8b0;
+        --shadow: 0 20px 60px rgba(26, 32, 44, 0.08);
+        --radius: 34px;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.65;
+      }
+
+      h1, h2, h3 {
+        font-family: Georgia, "Times New Roman", serif;
+        margin: 0;
+        color: #18202a;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .container {
+        width: min(1100px, calc(100% - 40px));
+        margin: 0 auto;
+      }
+
+      .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        backdrop-filter: blur(10px);
+        background: rgba(247, 245, 242, 0.86);
+        border-bottom: 1px solid rgba(232, 225, 216, 0.7);
+      }
+
+      .site-header-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 18px 0;
+        gap: 20px;
+      }
+
+      .brand {
+        font-size: 0.82rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--muted);
+        font-weight: 700;
+      }
+
+      .nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 18px;
+        font-size: 0.95rem;
+        color: var(--muted);
+      }
+
+      .hero {
+        position: relative;
+        padding: 80px 0 56px;
+        overflow: hidden;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        width: 460px;
+        height: 460px;
+        right: -120px;
+        top: -60px;
+        background: radial-gradient(circle, rgba(224, 217, 204, 0.9) 0%, rgba(224, 217, 204, 0) 70%);
+        pointer-events: none;
+      }
+
+      .hero::after {
+        content: "";
+        position: absolute;
+        width: 380px;
+        height: 380px;
+        left: -120px;
+        bottom: -120px;
+        background: radial-gradient(circle, rgba(215, 228, 248, 0.9) 0%, rgba(215, 228, 248, 0) 70%);
+        pointer-events: none;
+      }
+
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 56px;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+      }
+
+      .eyebrow {
+        display: inline-block;
+        padding: 10px 16px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.85);
+        border: 1px solid rgba(232, 225, 216, 0.9);
+        color: var(--muted);
+        font-size: 0.78rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-bottom: 24px;
+      }
+
+      .hero h1 {
+        font-size: clamp(2.8rem, 6vw, 4.6rem);
+        line-height: 1.03;
+        margin-bottom: 16px;
+      }
+
+      .hero-title {
+        font-size: 1.18rem;
+        font-weight: 600;
+        color: #334155;
+        margin-bottom: 20px;
+      }
+
+      .hero-text {
+        font-size: 1.06rem;
+        color: var(--muted);
+        max-width: 60ch;
+      }
+
+      .button-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 28px;
+      }
+
+      .btn {
+        padding: 14px 20px;
+        border-radius: 999px;
+        font-weight: 600;
+        transition: transform 0.18s ease, box-shadow 0.18s ease;
+        display: inline-flex;
+        align-items: center;
+      }
+
+      .btn:hover,
+      .card:hover,
+      .skill:hover {
+        transform: translateY(-2px);
+      }
+
+      .btn-primary {
+        background: var(--primary);
+        color: white;
+        box-shadow: var(--shadow);
+      }
+
+      .btn-secondary {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        color: var(--text);
+      }
+
+      .photo-wrap {
+        position: relative;
+      }
+
+      .photo-wrap::before {
+        content: "";
+        position: absolute;
+        inset: 24px -12px -18px 16px;
+        border-radius: 40px;
+        background: linear-gradient(135deg, rgba(232, 228, 220, 0.95), rgba(215, 228, 248, 0.75));
+        filter: blur(8px);
+      }
+
+      .photo-card {
+        position: relative;
+        background: rgba(255, 255, 255, 0.75);
+        border: 1px solid rgba(255, 255, 255, 0.8);
+        border-radius: 40px;
+        padding: 14px;
+        box-shadow: var(--shadow);
+      }
+
+      .photo-card img {
+        display: block;
+        width: 100%;
+        height: 540px;
+        object-fit: cover;
+        border-radius: 30px;
+      }
+
+      section {
+        padding: 56px 0;
+      }
+
+      .section-intro {
+        margin-bottom: 24px;
+      }
+
+      .section-kicker {
+        font-size: 0.78rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--primary);
+        font-weight: 700;
+        margin-bottom: 12px;
+      }
+
+      .section-title {
+        font-size: clamp(2rem, 4vw, 3rem);
+        line-height: 1.12;
+      }
+
+      .story-card,
+      .card {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        transition: transform 0.18s ease;
+      }
+
+      .story-card {
+        padding: 36px;
+      }
+
+      .story-text {
+        color: var(--muted);
+        font-size: 1.02rem;
+      }
+
+      .experience-list,
+      .projects-list {
+        display: grid;
+        gap: 18px;
+      }
+
+      .card {
+        padding: 30px;
+      }
+
+      .card-meta {
+        color: var(--muted);
+        font-size: 0.92rem;
+        margin-bottom: 10px;
+      }
+
+      .card-org {
+        color: #4f7f79;
+        font-weight: 600;
+        margin: 6px 0 12px;
+      }
+
+      .skills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .skill {
+        padding: 12px 18px;
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        box-shadow: 0 8px 22px rgba(26, 32, 44, 0.05);
+        font-weight: 600;
+        color: #3c4652;
+        transition: transform 0.18s ease;
+      }
+
+      .contact-box {
+        background: #1f2933;
+        color: white;
+        border-radius: 40px;
+        padding: 42px;
+        box-shadow: 0 24px 60px rgba(26, 32, 44, 0.16);
+      }
+
+      .contact-box p {
+        color: rgba(255, 255, 255, 0.78);
+      }
+
+      .contact-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 24px;
+      }
+
+      .contact-actions a {
+        border-radius: 999px;
+        padding: 14px 18px;
+        font-weight: 600;
+      }
+
+      .contact-actions .email {
+        background: white;
+        color: #1f2933;
+      }
+
+      .contact-actions .outline {
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        color: white;
+      }
+
+      @media (max-width: 900px) {
+        .hero-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .photo-card img {
+          height: 420px;
+        }
+
+        .nav {
+          display: none;
+        }
+
+        .hero {
+          padding-top: 56px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="container site-header-inner">
+        <div class="brand">Anastasia Terzidou</div>
+        <nav class="nav">
+          {navItems.map((item) => (
+            <a href={item.href}>{item.label}</a>
+          ))}
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="container hero-grid">
+          <div>
+            <div class="eyebrow">Systems Design — Data &amp; Analytics — Platforms</div>
+            <h1>Anastasia Terzidou</h1>
+            <div class="hero-title">
+              Data &amp; Analytics Specialist | Data Platforms &amp; System Design | PhD Physics
+            </div>
+            <p class="hero-text">
+              Working at the intersection of data analytics, system design, and scientific
+              research, developing data platforms and reporting systems for complex data-driven
+              environments.
+            </p>
+
+            <div class="button-row">
+              <a
+                class="btn btn-primary"
+                href="https://www.linkedin.com/in/anastasia-terzidou-21526713a/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                LinkedIn
+              </a>
+              <a class="btn btn-secondary" href="mailto:anterzid@gmail.com">Email</a>
+              <a class="btn btn-secondary" href="https://github.com/anterzid" target="_blank" rel="noreferrer">
+                GitHub
+              </a>
+            </div>
+          </div>
+
+          <div class="photo-wrap">
+            <div class="photo-card">
+              <img src="/profilePhoto.jpg" alt="Portrait of Anastasia Terzidou" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about">
+        <div class="container">
+          <div class="section-intro">
+            <div class="section-kicker">About</div>
+            <h2 class="section-title">A professional profile grounded in data, systems, and scientific rigor.</h2>
+          </div>
+          <div class="story-card">
+            <p class="story-text">
+              I work across data analysis, analytics architecture, reporting logic, and platform-oriented
+              problem solving, with a professional focus on building structured decision-support environments.
+              My background combines applied analytics and business intelligence with academic research in physics,
+              enabling a systems-driven approach to complex information problems.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience">
+        <div class="container">
+          <div class="section-intro">
+            <div class="section-kicker">Experience</div>
+            <h2 class="section-title">Professional and academic trajectory</h2>
+          </div>
+          <div class="experience-list">
+            {experience.map((item) => (
+              <article class="card">
+                <div class="card-meta">{item.period}</div>
+                <h3>{item.title}</h3>
+                <div class="card-org">{item.org}</div>
+                <p class="story-text">{item.description}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="projects">
+        <div class="container">
+          <div class="section-intro">
+            <div class="section-kicker">Projects &amp; Systems</div>
+            <h2 class="section-title">Selected areas of work</h2>
+          </div>
+          <div class="projects-list">
+            {projects.map((item) => (
+              <article class="card">
+                <h3>{item.title}</h3>
+                <p class="story-text">{item.text}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="research">
+        <div class="container">
+          <div class="section-intro">
+            <div class="section-kicker">Research</div>
+            <h2 class="section-title">PhD research in solid-state physics</h2>
+          </div>
+          <div class="story-card">
+            <p class="story-text">
+              Research centered on fulleride materials, high-pressure studies, Raman spectroscopy,
+              and the behavior of condensed matter systems under extreme conditions. This work informs
+              a methodological approach based on analytical precision, structure, and interpretive rigor.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="publications">
+        <div class="container">
+          <div class="section-intro">
+            <div class="section-kicker">Publications</div>
+            <h2 class="section-title">Publications and scientific contributions</h2>
+          </div>
+          <div class="story-card">
+            <p class="story-text">
+              This section will include journal papers, conference contributions, presentations,
+              and other scientific outputs.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills">
+        <div class="container">
+          <div class="section-intro">
+            <div class="section-kicker">Skills</div>
+            <h2 class="section-title">Core areas of expertise</h2>
+          </div>
+          <div class="skills">
+            {skills.map((skill) => (
+              <span class="skill">{skill}</span>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <div class="container">
+          <div class="contact-box">
+            <div class="section-kicker" style="color: rgba(255,255,255,0.72);">Contact</div>
+            <h2 class="section-title" style="color: white;">Get in touch</h2>
+            <p>
+              For professional collaboration, research-related communication, or portfolio inquiries,
+              feel free to reach out.
+            </p>
+
+            <div class="contact-actions">
+              <a class="email" href="mailto:anterzid@gmail.com">anterzid@gmail.com</a>
+              <a class="outline" href="https://www.linkedin.com/in/anastasia-terzidou-21526713a/" target="_blank" rel="noreferrer">LinkedIn</a>
+              <a class="outline" href="https://github.com/anterzid" target="_blank" rel="noreferrer">GitHub</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
