@@ -9,45 +9,65 @@ const navItems = [
   { label: "Contact", href: "#contact" },
 ];
 
+const aboutIntro = `
+I work on the development, configuration, and evolution of internal reporting and revenue management systems used in hospitality environments. My role combines product-oriented thinking, system design, data validation, reporting logic, and workflow optimization, with a strong focus on turning operational needs into usable system functionality.
+`;
+
+const aboutHighlights = [
+  {
+    title: "Systems Thinking",
+    text: "I approach platform problems structurally, focusing on how logic, configuration, reporting, and usability work together inside a system.",
+  },
+  {
+    title: "Product Contribution",
+    text: "I contribute to the design and evolution of internal tools and of a new Revenue Management System, with emphasis on dashboards, reporting logic, and future forecasting functionality.",
+  },
+  {
+    title: "Analytical Rigor",
+    text: "My academic background in physics shapes the way I work: analytically, methodically, and with strong attention to precision and validation.",
+  },
+];
+
 const experience = [
   {
-    period: "2025 – Present",
+    period: "2023 – Present",
     title: "Data-driven Product Specialist",
     org: "RevitUp",
-    description:
-    `Contributing to the evolution of internal reporting and revenue systems, with a focus on product-oriented system improvements, reporting automation, configuration logic, and user-facing functionality.
-	  
-	  Key areas of work include:
-		•	development and refinement of reporting and decision-support systems
-		•	configuration of system settings, mappings, reports, and user roles
-		•	testing, validation, and debugging to improve reliability and user trust
-		•	support for structured workflows across teams through ticketing and task management
-		•	contribution to the design and evolution of RevUp, a new Revenue Management System (RMS), including dashboards, reporting logic, and future forecasting functionality`
-			,
+    summary:
+      "Contributing to the evolution of internal reporting and revenue systems, with a focus on product-oriented system improvements, reporting automation, configuration logic, and user-facing functionality.",
+    bullets: [
+      "Development and refinement of reporting and decision-support systems",
+      "Configuration of system settings, mappings, reports, and user roles",
+      "Testing, validation, and debugging to improve reliability and user trust",
+      "Support for structured workflows across teams through ticketing and task management",
+      "Contribution to the design and evolution of RevUp, a new Revenue Management System (RMS), including dashboards, reporting logic, and future forecasting functionality",
+    ],
   },
-
   {
-    period: "2023 – 2025",
+    period: "2023",
     title: "Junior Data Analyst",
     org: "RevitUp",
-    description:
-    `Worked on reporting operations, business intelligence, and system optimization, supporting the transition from manual Excel-based workflows to more structured internal reporting systems.
-
-		Key areas of work included:
-			•	manual and system-based reporting for hotel projects
-			•	data validation and reporting accuracy checks
-			•	support for migration from legacy workflows to Revelier 2
-			•	setup and configuration of projects, mappings, and reporting structures
-			•	collaboration with developers and internal teams on system fixes, improvements, and usability needs`
-			,
+    summary:
+      "Started by supporting reporting processes and system transition efforts, gradually expanding into broader responsibilities across analytics operations, validation, and platform improvement.",
+    bullets: [
+      "Supported the migration from legacy reporting practices to internal system-based workflows",
+      "Worked on data validation and reporting reliability improvements",
+      "Contributed to debugging and refinement of reporting logic",
+      "Collaborated with business and technical teams to support operational needs",
+    ],
   },
-  
   {
     period: "Ongoing",
     title: "PhD Researcher in Physics",
     org: "Aristotle University of Thessaloniki",
-    description:
-      "Research in solid-state physics, fulleride materials, high-pressure studies, and Raman spectroscopy.",
+    summary:
+      "Research in solid-state physics with focus on fulleride materials, high-pressure studies, and Raman spectroscopy.",
+    bullets: [
+      "Study of condensed matter systems under pressure",
+      "Research on fulleride materials and related physical behavior",
+      "Use of spectroscopic methods with emphasis on Raman analysis",
+      "Interpretation of experimental data with strong analytical and methodological focus",
+    ],
   },
 ];
 
@@ -499,7 +519,7 @@ const skills = [
         <div class="container">
           <div class="section-intro">
             <div class="section-kicker">About</div>
-            <h2 class="section-title">A professional profile shaped by systems thinking, product contribution and dat-driven problem solving.</h2>
+            <h2 class="section-title">A professional profile shaped by systems thinking, product contribution and data-driven problem solving.</h2>
           </div>
           <div class="story-card">
             <p class="story-text">
