@@ -371,6 +371,43 @@ const skills = [
         font-size: 1.02rem;
       }
 
+	  .highlight-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 18px;
+		margin-top: 20px;
+		}
+
+		.mini-card {
+		background: var(--surface);
+		border: 1px solid var(--line);
+		border-radius: 28px;
+		padding: 24px;
+		box-shadow: 0 12px 30px rgba(26, 32, 44, 0.05);
+		}
+
+		.mini-card h3 {
+		font-size: 1.2rem;
+		margin-bottom: 10px;
+		}
+
+		.bullet-list {
+		margin: 16px 0 0;
+		padding-left: 20px;
+		color: var(--muted);
+		}
+
+		.bullet-list li {
+		margin-bottom: 10px;
+		line-height: 1.65;
+		}
+
+		@media (max-width: 900px) {
+		.highlight-grid {
+			grid-template-columns: 1fr;
+		}
+		}
+
       .experience-list,
       .projects-list {
         display: grid;
@@ -516,41 +553,55 @@ const skills = [
       </section>
 
       <section id="about">
-        <div class="container">
-          <div class="section-intro">
-            <div class="section-kicker">About</div>
-            <h2 class="section-title">A professional profile shaped by systems thinking, product contribution and data-driven problem solving.</h2>
-          </div>
-          <div class="story-card">
-            <p class="story-text">
-              I work on the development, configuration, and evolution of internal reporting and revenue management systems used in hospitality environments. My role combines product-oriented thinking, system design, data validation, reporting logic, and workflow optimization, with a strong focus on turning operational needs into usable system functionality.
+		<div class="container">
+			<div class="section-intro">
+			<div class="section-kicker">About</div>
+			<h2 class="section-title">
+				A professional profile shaped by systems thinking, product contribution and data-driven
+				problem solving.
+			</h2>
+			</div>
 
-			  Over the past years, I have contributed to the migration and stabilization of internal platforms, the automation of reporting processes, the improvement of data quality, and the adoption of structured workflows across teams. My work sits between business users and developers, helping shape tools that are both operationally reliable and aligned with real user needs.
+			<div class="story-card">
+			<p class="story-text">{aboutIntro}</p>
+			</div>
 
-			  In parallel, I contribute to the development of a new Revenue Management System (RMS), working on reporting structure, dashboards, configuration logic, and future forecasting capabilities. My academic background in physics further informs the way I approach complex systems: analytically, structurally, and with strong attention to precision.
-            </p>
-          </div>
-        </div>
-      </section>
+			<div class="highlight-grid">
+			{aboutHighlights.map((item) => (
+				<article class="mini-card">
+				<h3>{item.title}</h3>
+				<p class="story-text">{item.text}</p>
+				</article>
+			))}
+			</div>
+		</div>
+	 </section>
 
       <section id="experience">
-        <div class="container">
-          <div class="section-intro">
-            <div class="section-kicker">Experience</div>
-            <h2 class="section-title">Professional and academic trajectory</h2>
-          </div>
-          <div class="experience-list">
-            {experience.map((item) => (
-              <article class="card">
-                <div class="card-meta">{item.period}</div>
-                <h3>{item.title}</h3>
-                <div class="card-org">{item.org}</div>
-                <p class="story-text">{item.description}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
+		<div class="container">
+			<div class="section-intro">
+			<div class="section-kicker">Experience</div>
+			<h2 class="section-title">Professional and academic trajectory</h2>
+			</div>
+
+			<div class="experience-list">
+			{experience.map((item) => (
+				<article class="card">
+				<div class="card-meta">{item.period}</div>
+				<h3>{item.title}</h3>
+				<div class="card-org">{item.org}</div>
+				<p class="story-text">{item.summary}</p>
+
+				<ul class="bullet-list">
+					{item.bullets.map((bullet) => (
+					<li>{bullet}</li>
+					))}
+				</ul>
+				</article>
+			))}
+			</div>
+		</div>
+	</section>
 
       <section id="projects">
         <div class="container">
