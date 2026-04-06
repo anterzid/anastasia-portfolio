@@ -1,109 +1,16 @@
 ---
-const navItems = [
-  { label: "About", href: "#about" },
-  { label: "Experience", href: "#experience" },
-  { label: "Projects & Systems", href: "#projects" },
-  { label: "Research", href: "#research" },
-  { label: "Publications", href: "#publications" },
-  { label: "Skills", href: "#skills" },
-  { label: "Contact", href: "#contact" },
-];
-
-const aboutIntro = `
-I work on the development, configuration, and evolution of internal reporting and revenue management systems used in consluting for hospitality environments. My role combines product-oriented thinking, system design, data validation, reporting logic, and workflow optimization, with a strong focus on turning operational needs into usable system functionality.
-`;
-
-const aboutHighlights = [
-  {
-    title: "Systems Thinking",
-    text: "I approach platform problems structurally, focusing on how logic, configuration, reporting, and usability work together inside a system.",
-  },
-  {
-    title: "Product Contribution",
-    text: "I contribute to the design and evolution of internal tools and of a new Revenue Management System, with emphasis on dashboards, reporting logic, and future forecasting functionality.",
-  },
-  {
-    title: "Analytical Rigor",
-    text: "My academic background in physics shapes the way I work: analytically, methodically, and with strong attention to precision and validation.",
-  },
-];
-
-const experience = [
-  {
-    period: "2025 – Present",
-    title: "Data-driven Product Specialist",
-    org: "RevitUp",
-    summary:
-      "Contributing to the evolution of internal reporting and revenue systems, with a focus on product-oriented system improvements, reporting automation, configuration logic, and user-facing functionality.",
-    bullets: [
-      "Development and refinement of reporting and decision-support systems",
-      "Configuration of system settings, mappings, reports, and user roles",
-      "Testing, validation, and debugging to improve reliability and user trust",
-      "Support for structured workflows across teams through ticketing and task management",
-      "Contribution to the design and evolution of RevUp, a new Revenue Management System (RMS), including dashboards, reporting logic, and future forecasting functionality",
-    ],
-  },
-  {
-    period: "2023-2025",
-    title: "Junior Data Analyst",
-    org: "RevitUp",
-    summary:
-      "Started by supporting reporting processes and system transition efforts, gradually expanding into broader responsibilities across analytics operations, validation, and platform improvement.",
-    bullets: [
-      "Supported the migration from legacy reporting practices to internal system-based workflows",
-      "Worked on data validation and reporting reliability improvements",
-      "Contributed to debugging and refinement of reporting logic",
-      "Collaborated with business and technical teams to support operational needs",
-    ],
-  },
-  {
-    period: "2018-2026",
-    title: "PhD Researcher in Physics",
-    org: "Aristotle University of Thessaloniki",
-    summary:
-      "Research in solid-state physics with focus on fulleride materials, high-pressure studies, and Raman spectroscopy.",
-    bullets: [
-      "Study of condensed matter systems under pressure",
-      "Research on fulleride materials and related physical behavior",
-      "Use of spectroscopic methods with emphasis on Raman analysis",
-      "Interpretation of experimental data with strong analytical and methodological focus",
-    ],
-  },
-];
-
-const projects = [
-  {
-    title: "Analytics Platforms",
-    text: "Design and optimization of reporting environments, business logic, and user-facing analytics structures.",
-  },
-  {
-    title: "Dashboards & BI Systems",
-    text: "Development of metric frameworks, visualization logic, and decision-support dashboards for operational use.",
-  },
-  {
-    title: "Forecasting & Data Workflows",
-    text: "Exploration of forecasting architecture, metric modeling, and structured data pipelines for scalable reporting.",
-  },
-  {
-    title: "Scientific Research Systems Thinking",
-    text: "Application of analytical rigor from physics research to complex data and platform design problems.",
-  },
-];
-
-const skills = [
-  "Data Analysis",
-  "Business Intelligence",
-  "Data Platforms",
-  "System Design",
-  "Python",
-  "SQL",
-  "APIs",
-  "Dashboards",
-  "Scientific Research",
-  "Raman Spectroscopy",
-  "Data Visualization",
-  "Analytics Workflows",
-];
+import {
+  socialLinks,
+  navItems,
+  aboutIntro,
+  aboutHighlights,
+  experience,
+  projects,
+  publicationGroups,
+  additionalSections,
+  talks,
+  skillGroups,
+} from "../data/portfolio";
 ---
 
 <html lang="en">
@@ -126,15 +33,15 @@ const skills = [
 
     <style>
       :root {
-        --bg: #f7f5f2;
-		--bg2: #ece7f4;
-        --surface: #ffffff;
-        --text: #1f2933;
-        --muted: #5b6470;
-        --line: #e8e1d8;
-        --primary: #5577b6;
-        --secondary: #7db8b0;
-        --shadow: 0 20px 60px rgba(26, 32, 44, 0.08);
+        --bg: #f6f1eb;
+        --bg2: #ece5f1;
+        --surface: #fffdfb;
+        --text: #24303a;
+        --muted: #66707c;
+        --line: #e7ddd2;
+        --primary: #7b6d96;
+        --secondary: #8aa7a0;
+        --shadow: 0 20px 60px rgba(30, 36, 44, 0.07);
         --radius: 34px;
       }
 
@@ -143,17 +50,17 @@ const skills = [
       }
 
       body {
-		margin: 0;
-		font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-		background: linear-gradient(
-				135deg,
-				#f7f5f2 0%,
-				#efe9f6 50%,
-				#f7f5f2 100%
-			);
-		color: var(--text);
-		line-height: 1.65;
-		}
+        margin: 0;
+        font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        background: linear-gradient(
+          140deg,
+          #f6f1eb 0%,
+          #efe8f3 42%,
+          #f6f1eb 100%
+        );
+        color: var(--text);
+        line-height: 1.65;
+      }
 
       h1, h2, h3 {
         font-family: "Lora", Georgia, "Times New Roman", serif;
@@ -176,8 +83,8 @@ const skills = [
         top: 0;
         z-index: 20;
         backdrop-filter: blur(10px);
-        background: rgba(247, 245, 242, 0.86);
-        border-bottom: 1px solid rgba(232, 225, 216, 0.7);
+        background: rgba(246, 241, 235, 0.84);
+        border-bottom: 1px solid rgba(231, 221, 210, 0.78);
       }
 
       .site-header-inner {
@@ -192,16 +99,57 @@ const skills = [
         font-size: 0.82rem;
         letter-spacing: 0.14em;
         text-transform: uppercase;
-        color: var(--muted);
+        color: #5f6771;
         font-weight: 700;
       }
 
       .nav {
         display: flex;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         gap: 18px;
-        font-size: 0.95rem;
+        font-size: 0.88rem;
         color: var(--muted);
+        overflow-x: auto;
+        padding-bottom: 4px;
+        scrollbar-width: none;
+        align-items: center;
+      }
+
+      .nav::-webkit-scrollbar {
+        display: none;
+      }
+
+      .nav a {
+        display: inline-flex;
+        align-items: center;
+        padding: 0;
+        border-radius: 0;
+        background: transparent;
+        border: none;
+        color: #5f6771;
+        line-height: 1.2;
+        transition: color 0.18s ease, opacity 0.18s ease;
+        box-shadow: none;
+        white-space: nowrap;
+      }
+
+      .nav a:hover {
+        color: #2f3944;
+        opacity: 1;
+      }
+
+      .nav a::after {
+        content: "";
+        display: block;
+        width: 0;
+        height: 1px;
+        background: rgba(123, 109, 150, 0.55);
+        transition: width 0.18s ease;
+        margin-top: 4px;
+      }
+
+      .nav a:hover::after {
+        width: 100%;
       }
 
       .hero {
@@ -217,8 +165,7 @@ const skills = [
         height: 460px;
         right: -120px;
         top: -60px;
-        background: radial-gradient(circle, rgba(224, 217, 204, 0.9) 0%, rgba(224, 217, 204, 0) 70%);
-        pointer-events: none;
+        background: radial-gradient(circle, rgba(225, 215, 203, 0.52) 0%, rgba(225, 215, 203, 0) 72%);        pointer-events: none;
       }
 
       .hero::after {
@@ -228,14 +175,13 @@ const skills = [
         height: 380px;
         left: -120px;
         bottom: -120px;
-        background: radial-gradient(circle, rgba(215, 228, 248, 0.9) 0%, rgba(215, 228, 248, 0) 70%);
-        pointer-events: none;
+        background: radial-gradient(circle, rgba(228, 220, 239, 0.46) 0%, rgba(228, 220, 239, 0) 72%);        pointer-events: none;
       }
 
       .hero-grid {
         display: grid;
-        grid-template-columns: 1.1fr 0.9fr;
-        gap: 56px;
+        grid-template-columns: 1fr 1fr;
+        gap: 72px;
         align-items: center;
         position: relative;
         z-index: 1;
@@ -245,9 +191,9 @@ const skills = [
         display: inline-block;
         padding: 10px 16px;
         border-radius: 999px;
-        background: rgba(255, 255, 255, 0.85);
-        border: 1px solid rgba(232, 225, 216, 0.9);
-        color: var(--muted);
+        background: rgba(255, 253, 251, 0.86);
+        border: 1px solid rgba(231, 221, 210, 0.92);
+        color: #6a7280;
         font-size: 0.78rem;
         letter-spacing: 0.12em;
         text-transform: uppercase;
@@ -256,22 +202,45 @@ const skills = [
       }
 
       .hero h1 {
-        font-size: clamp(2.8rem, 6vw, 4.6rem);
-        line-height: 1.03;
-        margin-bottom: 16px;
+        font-size: clamp(3.2rem, 6vw, 5rem);
+        line-height: 1.02;
+        margin-bottom: 18px;
       }
 
       .hero-title {
-        font-size: 1.18rem;
+        font-size: 1.25rem;
         font-weight: 600;
-        color: #334155;
-        margin-bottom: 20px;
+        color: #2f3944;
+        margin-bottom: 24px;
+      }
+
+      .hero-motto {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        font-size: 1rem;
+        color: #6b7280;
+        font-style: italic;
+        margin-bottom: 18px;
+        letter-spacing: 0.01em;
+      }
+
+      .hero-motto::before {
+        content: "";
+        width: 42px;
+        height: 1px;
+        background: linear-gradient(
+          90deg,
+          rgba(123, 109, 150, 0.8),
+          rgba(123, 109, 150, 0.18)
+        );
+        flex-shrink: 0;
       }
 
       .hero-text {
-        font-size: 1.06rem;
+        font-size: 1.1rem;
         color: var(--muted);
-        max-width: 60ch;
+        max-width: 58ch;
       }
 
       .button-row {
@@ -315,10 +284,15 @@ const skills = [
       .photo-wrap::before {
         content: "";
         position: absolute;
-        inset: 24px -12px -18px 16px;
-        border-radius: 40px;
-        background: linear-gradient(135deg, rgba(232, 228, 220, 0.95), rgba(215, 228, 248, 0.75));
-        filter: blur(8px);
+        inset: 40px -20px -30px 30px;
+        border-radius: 50px;
+        background: linear-gradient(
+          135deg,
+          rgba(123, 109, 150, 0.25),
+          rgba(138, 167, 160, 0.18)
+        );
+        filter: blur(18px);
+        z-index: 0;
       }
 
       .photo-card {
@@ -356,17 +330,21 @@ const skills = [
       }
 
       .section-title {
-        font-size: clamp(2rem, 4vw, 3rem);
-        line-height: 1.12;
+        font-size: clamp(2.2rem, 4vw, 3.2rem);
+        line-height: 1.1;
+        letter-spacing: -0.01em;
       }
 
-      .story-card,
-      .card {
-        background: var(--surface);
+      .story-card {
+        padding: 40px;
+        background: linear-gradient(
+          180deg,
+          rgba(255,253,251,0.98),
+          rgba(245,240,248,0.96)
+        );
         border: 1px solid var(--line);
         border-radius: var(--radius);
-        box-shadow: var(--shadow);
-        transition: transform 0.18s ease;
+        box-shadow: 0 20px 60px rgba(30, 36, 44, 0.08);
       }
 
       .story-card {
@@ -378,20 +356,194 @@ const skills = [
         font-size: 1.02rem;
       }
 
+      .publications-list {
+        display: grid;
+        gap: 18px;
+      }
+
+      .publication-item {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        padding: 28px 30px;
+      }
+
+      .publication-authors {
+        color: var(--muted);
+        font-size: 0.95rem;
+        margin-bottom: 10px;
+      }
+
+      .publication-title {
+        font-family: "Lora", Georgia, "Times New Roman", serif;
+        font-size: 1.2rem;
+        line-height: 1.35;
+        margin-bottom: 10px;
+        color: #18202a;
+      }
+
+      .publication-meta {
+        color: var(--muted);
+        font-size: 0.98rem;
+        line-height: 1.7;
+      }
+
+      .publication-meta em {
+        color: #1f2933;
+        font-style: italic;
+      }
+
+      .publication-doi {
+        display: inline-block;
+        margin-top: 10px;
+        color: var(--primary);
+        font-weight: 600;
+        word-break: break-word;
+      }
+
+      .publication-doi:hover {
+        text-decoration: underline;
+      }
+
+      .presentation-section {
+        margin-top: 22px;
+      }
+
+      .subsection-title {
+        font-family: "Lora", Georgia, "Times New Roman", serif;
+        font-size: 1.5rem;
+        line-height: 1.3;
+        color: #18202a;
+        margin: 0 0 16px;
+      }
+
+      .presentation-item {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        padding: 28px 30px;
+      }
+
+      .presentation-meta {
+        color: var(--muted);
+        font-size: 0.98rem;
+        line-height: 1.7;
+      }
+
+      .presentation-meta em {
+        color: #1f2933;
+        font-style: italic;
+      }
+
+      .featured-talk-card {
+        position: relative;
+        overflow: hidden;
+        background: linear-gradient(
+          135deg,
+          rgba(255,253,251,0.98) 0%,
+          rgba(245,240,248,0.98) 52%,
+          rgba(244,248,246,0.98) 100%
+        );
+        border: 1px solid rgba(123, 109, 150, 0.14);
+        border-radius: calc(var(--radius) + 6px);
+        box-shadow: 0 24px 68px rgba(30, 36, 44, 0.1);
+        padding: 34px 36px;
+      }
+
+      .featured-talk-card::before {
+        content: "";
+        position: absolute;
+        top: -56px;
+        right: -56px;
+        width: 190px;
+        height: 190px;
+        background: radial-gradient(circle, rgba(123, 109, 150, 0.16) 0%, rgba(123, 109, 150, 0) 72%);
+        pointer-events: none;
+      }
+
+      .featured-talk-card::after {
+        content: "";
+        position: absolute;
+        bottom: -60px;
+        left: -44px;
+        width: 180px;
+        height: 180px;
+        background: radial-gradient(circle, rgba(138, 167, 160, 0.14) 0%, rgba(138, 167, 160, 0) 72%);
+        pointer-events: none;
+      }
+
+      .featured-talk-kicker {
+        position: relative;
+        z-index: 1;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 16px;
+        border-radius: 999px;
+        background: rgba(255, 253, 251, 0.82);
+        border: 1px solid rgba(123, 109, 150, 0.14);
+        color: #6b5f82;
+        font-size: 0.78rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-bottom: 18px;
+      }
+
+      .featured-talk-card .publication-title,
+      .featured-talk-card .presentation-meta,
+      .featured-talk-card .story-text,
+      .featured-talk-card .publication-doi {
+        position: relative;
+        z-index: 1;
+      }
+
+      .featured-talk-card .publication-title {
+        font-size: clamp(1.45rem, 2.4vw, 2rem);
+        line-height: 1.24;
+        margin-bottom: 14px;
+      }
+
+      .featured-talk-card .presentation-meta {
+        margin-bottom: 14px;
+      }
+
+      .featured-talk-card .story-text {
+        max-width: 70ch;
+        margin-bottom: 0;
+      }
+
+      .featured-talk-card .publication-doi {
+        margin-top: 18px;
+      }
+
 	  .highlight-grid {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		gap: 18px;
-		margin-top: 20px;
-		}
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      margin-top: 28px;
+    }
 
 		.mini-card {
-		background: var(--surface);
-		border: 1px solid var(--line);
-		border-radius: 28px;
-		padding: 24px;
-		box-shadow: 0 12px 30px rgba(26, 32, 44, 0.05);
-		}
+      position: relative;
+      background: linear-gradient(
+        180deg,
+        rgba(255,253,251,0.98),
+        rgba(246,240,248,0.98)
+      );
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      padding: 26px;
+      box-shadow: 0 14px 40px rgba(30, 36, 44, 0.08);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .mini-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 22px 55px rgba(30, 36, 44, 0.12);
+    }
 
 		.mini-card h3 {
 		font-size: 1.2rem;
@@ -409,16 +561,65 @@ const skills = [
 		line-height: 1.65;
 		}
 
-		@media (max-width: 900px) {
-		.highlight-grid {
-			grid-template-columns: 1fr;
-		}
-		}
 
-      .experience-list,
-      .projects-list {
+      .experience-list {
         display: grid;
         gap: 18px;
+      }
+
+      .projects-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 22px;
+      }
+
+      .project-card {
+        position: relative;
+        overflow: hidden;
+        background: linear-gradient(180deg, rgba(255,253,251,0.98), rgba(248,244,249,0.98));
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        box-shadow: 0 18px 48px rgba(30, 36, 44, 0.08);
+        padding: 32px;
+        min-height: 220px;
+        transition: transform 0.18s ease, box-shadow 0.18s ease;
+      }
+
+      .project-card::before {
+        content: "";
+        position: absolute;
+        top: -40px;
+        right: -40px;
+        width: 140px;
+        height: 140px;
+        background: radial-gradient(circle, rgba(123, 109, 150, 0.12) 0%, rgba(123, 109, 150, 0) 72%);        pointer-events: none;
+      }
+
+      .project-card::after {
+        content: "";
+        position: absolute;
+        bottom: -40px;
+        left: -40px;
+        width: 130px;
+        height: 130px;
+        background: radial-gradient(circle, rgba(138, 167, 160, 0.12) 0%, rgba(138, 167, 160, 0) 72%);
+        pointer-events: none;
+      }
+
+      .project-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 22px 58px rgba(30, 36, 44, 0.1);
+      }
+
+      .project-card h3 {
+        position: relative;
+        z-index: 1;
+        margin-bottom: 14px;
+      }
+
+      .project-card .story-text {
+        position: relative;
+        z-index: 1;
       }
 
       .card {
@@ -443,19 +644,41 @@ const skills = [
         gap: 12px;
       }
 
-      .skill {
-        padding: 12px 18px;
+      .skills-layout {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+      }
+
+      .skills-panel {
         background: var(--surface);
         border: 1px solid var(--line);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        padding: 28px 30px;
+      }
+
+      .skills-panel-title {
+        font-family: "Lora", Georgia, "Times New Roman", serif;
+        font-size: 1.3rem;
+        line-height: 1.3;
+        color: #18202a;
+        margin: 0 0 16px;
+      }
+
+      .skill {
+        padding: 12px 18px;
+        background: rgba(255, 253, 251, 0.94);
+        border: 1px solid var(--line);
         border-radius: 999px;
-        box-shadow: 0 8px 22px rgba(26, 32, 44, 0.05);
+        box-shadow: 0 8px 22px rgba(30, 36, 44, 0.045);
         font-weight: 600;
-        color: #3c4652;
+        color: #44505d;
         transition: transform 0.18s ease;
       }
 
       .contact-box {
-        background: #1f2933;
+        background: #27313a;
         color: white;
         border-radius: 40px;
         padding: 42px;
@@ -485,7 +708,7 @@ const skills = [
       }
 
       .contact-actions .outline {
-        border: 1px solid rgba(255, 255, 255, 0.2);
+        border: 1px solid rgba(255, 255, 255, 0.24);
         color: white;
       }
 
@@ -499,11 +722,32 @@ const skills = [
         }
 
         .nav {
+          display: flex;
+          overflow-x: auto;
+          flex-wrap: nowrap;
+          gap: 14px;
+          padding-bottom: 4px;
+          scrollbar-width: none;
+        }
+
+        .nav::-webkit-scrollbar {
           display: none;
         }
 
         .hero {
           padding-top: 56px;
+        }
+
+        .skills-layout {
+          grid-template-columns: 1fr;
+        }
+
+        .projects-list {
+          grid-template-columns: 1fr;
+        }
+
+        .highlight-grid {
+          grid-template-columns: 1fr;
         }
       }
     </style>
@@ -514,8 +758,8 @@ const skills = [
       <div class="container site-header-inner">
         <div class="brand">Anastasia Terzidou</div>
         <nav class="nav">
-          {navItems.map((item) => (
-            <a href={item.href}>{item.label}</a>
+          {navItems.map(({ label, href }) => (
+            <a href={href}>{label}</a>
           ))}
         </nav>
       </div>
@@ -530,6 +774,9 @@ const skills = [
             <div class="hero-title">
               Product &amp; Analytics Specialist | Data Platforms &amp; System Design | PhD Physics
             </div>
+            <p class="hero-motto">
+              Driving system evolution by aligning performance, usability, and real operational needs.
+            </p>
             <p class="hero-text">
               Working at the intersection of product development, data-driven decision support and system design
 			  with a focus on reporting platforms, RMS functionality, and structured system design for complex data environments.
@@ -538,14 +785,14 @@ const skills = [
             <div class="button-row">
               <a
                 class="btn btn-primary"
-                href="https://www.linkedin.com/in/anastasia-terzidou-21526713a/"
+                href={socialLinks.linkedin}
                 target="_blank"
                 rel="noreferrer"
               >
                 LinkedIn
               </a>
-              <a class="btn btn-secondary" href="mailto:anterzid@gmail.com">Email</a>
-              <a class="btn btn-secondary" href="https://github.com/anterzid" target="_blank" rel="noreferrer">
+              <a class="btn btn-secondary" href={socialLinks.email}>Email</a>
+              <a class="btn btn-secondary" href={socialLinks.github} target="_blank" rel="noreferrer">
                 GitHub
               </a>
             </div>
@@ -614,13 +861,37 @@ const skills = [
         <div class="container">
           <div class="section-intro">
             <div class="section-kicker">Projects &amp; Systems</div>
-            <h2 class="section-title">Selected areas of work</h2>
+            <h2 class="section-title">Selected product and systems work</h2>
           </div>
           <div class="projects-list">
             {projects.map((item) => (
-              <article class="card">
+              <article class="project-card">
                 <h3>{item.title}</h3>
                 <p class="story-text">{item.text}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="talks">
+        <div class="container">
+          <div class="section-intro">
+            <div class="section-kicker">Public Talks</div>
+            <h2 class="section-title">Selected talks and speaking engagements</h2>
+          </div>
+          <div class="publications-list">
+            {talks.map((item) => (
+              <article class="featured-talk-card">
+                <div class="featured-talk-kicker">Featured Speaking Engagement</div>
+                <h3 class="publication-title">{item.title}</h3>
+                <div class="presentation-meta">
+                  <em>{item.role}</em> — {item.event}, {item.date}, {item.location}
+                </div>
+                <p class="story-text">{item.description}</p>
+                <a class="publication-doi" href={item.link} target="_blank" rel="noreferrer">
+                  View event
+                </a>
               </article>
             ))}
           </div>
@@ -635,10 +906,17 @@ const skills = [
           </div>
           <div class="story-card">
             <p class="story-text">
-              Research centered on fulleride materials, high-pressure studies, Raman spectroscopy,
-              and the behavior of condensed matter systems under extreme conditions. This work informs
-              a methodological approach based on analytical precision, structure, and interpretive rigor.
+              My research focuses on fulleride systems and related π-electron materials, including doped C60 compounds and polycyclic aromatic hydrocarbons (PAHs). These systems are characterized by strong electron correlations, enabling the study of complex electronic phenomena such as unconventional superconductivity, intermediate valence states and quantum spin behavior.
             </p>
+
+            <ul class="bullet-list">
+              <li>
+                <strong>Research focus:</strong> strongly correlated electronic systems, fullerides and π-electron materials, emergent electronic states under external perturbations
+              </li>
+              <li>
+                <strong>Methods:</strong> Raman spectroscopy complemented by photoluminescence and X-ray absorption, combined with controlled pressure and temperature conditions
+              </li>
+            </ul>
           </div>
         </div>
       </section>
@@ -649,14 +927,98 @@ const skills = [
             <div class="section-kicker">Publications</div>
             <h2 class="section-title">Publications and scientific contributions</h2>
           </div>
-          <div class="story-card">
-            <p class="story-text">
-              This section will include journal papers, conference contributions, presentations,
-              and other scientific outputs.
-            </p>
+          <div class="publications-list">
+            {publicationGroups.papers.map((item) => (
+              <article class="publication-item">
+                <div class="publication-authors">{item.authors}</div>
+                <h3 class="publication-title">{item.title}</h3>
+                <div class="publication-meta">
+                  <em>{item.journal}</em>, {item.volume}, {item.pages} ({item.year})
+                </div>
+                <a class="publication-doi" href={item.href} target="_blank" rel="noreferrer">
+                  DOI: {item.doi}
+                </a>
+              </article>
+            ))}
+          </div>
+          <div class="presentation-section">
+            <h3 class="subsection-title">Oral Presentations</h3>
+            <div class="publications-list">
+              {publicationGroups.oral.map((item) => (
+                <article class="presentation-item">
+                  <div class="publication-authors">{item.authors}</div>
+                  <h3 class="publication-title">{item.title}</h3>
+                  <div class="presentation-meta">
+                    <em>{item.event}</em>, {item.location}, {item.date}
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+          <div class="presentation-section">
+            <h3 class="subsection-title">Poster Presentations</h3>
+            <div class="publications-list">
+              {publicationGroups.posters.map((item) => (
+                <article class="presentation-item">
+                  <div class="publication-authors">{item.authors}</div>
+                  <h3 class="publication-title">{item.title}</h3>
+                  <div class="presentation-meta">
+                    <em>{item.event}</em>, {item.location}, {item.date}
+                  </div>
+                  {item.doi && item.href && (
+                    <a class="publication-doi" href={item.href} target="_blank" rel="noreferrer">
+                      DOI: {item.doi}
+                    </a>
+                  )}
+                </article>
+              ))}
+            </div>
           </div>
         </div>
       </section>
+
+      <section id="volunteering">
+        <div class="container">
+          <div class="section-intro">
+            <div class="section-kicker">Volunteering</div>
+            <h2 class="section-title">Volunteering and community engagement</h2>
+          </div>
+          <div class="publications-list">
+            {additionalSections.volunteering.map((item) => (
+              <article class="presentation-item">
+                <h3 class="publication-title">{item.title}</h3>
+                <div class="presentation-meta">
+                  {item.organization && <><em>{item.organization}</em><br /></>}
+                  {item.date}
+                  {item.location && `, ${item.location}`}
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="seminars">
+        <div class="container">
+          <div class="section-intro">
+            <div class="section-kicker">Seminars & Conferences</div>
+            <h2 class="section-title">Selected seminars, courses and conferences attended</h2>
+          </div>
+          <div class="publications-list">
+            {additionalSections.seminars.map((item) => (
+              <article class="presentation-item">
+                <h3 class="publication-title">{item.title}</h3>
+                <div class="presentation-meta">
+                  {item.organization && <><em>{item.organization}</em><br /></>}
+                  {item.date}
+                  {item.location && `, ${item.location}`}
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
 
       <section id="skills">
         <div class="container">
@@ -664,9 +1026,16 @@ const skills = [
             <div class="section-kicker">Skills</div>
             <h2 class="section-title">Core areas of expertise</h2>
           </div>
-          <div class="skills">
-            {skills.map((skill) => (
-              <span class="skill">{skill}</span>
+          <div class="skills-layout">
+            {skillGroups.map((group) => (
+              <div class="skills-panel">
+                <h3 class="skills-panel-title">{group.title}</h3>
+                <div class="skills">
+                  {group.items.map((item) => (
+                    <span class="skill">{item}</span>
+                  ))}
+                </div>
+              </div>
             ))}
           </div>
         </div>
@@ -683,9 +1052,9 @@ const skills = [
             </p>
 
             <div class="contact-actions">
-              <a class="email" href="mailto:anterzid@gmail.com">anterzid@gmail.com</a>
-              <a class="outline" href="https://www.linkedin.com/in/anastasia-terzidou-21526713a/" target="_blank" rel="noreferrer">LinkedIn</a>
-              <a class="outline" href="https://github.com/anterzid" target="_blank" rel="noreferrer">GitHub</a>
+              <a class="email" href={socialLinks.email}>anterzid@gmail.com</a>
+              <a class="outline" href={socialLinks.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
+              <a class="outline" href={socialLinks.github} target="_blank" rel="noreferrer">GitHub</a>
             </div>
           </div>
         </div>
