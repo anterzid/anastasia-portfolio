@@ -9,30 +9,27 @@ export const navItems = [
   ["Experience", "#experience"],
   ["Projects", "#projects"],
   ["Talks", "#talks"],
-  ["Research", "#research"],
-  ["Publications", "#publications"],
-  ["Volunteering", "#volunteering"],
-  ["Courses & Events", "#seminars"],
+  ["Academic", "#academic"],
   ["Skills", "#skills"],
   ["Contact", "#contact"],
 ].map(([label, href]) => ({ label, href }));
 
 export const aboutIntro = `
-I work on the development, configuration, and evolution of internal reporting and revenue management systems used in hospitality consulting environments. My role combines product thinking, system design, data validation, reporting logic, and workflow optimization, with a strong focus on translating operational needs into usable system functionality.
+I design and improve internal data and reporting systems used in real operational environments. My work focuses on turning complex data flows into reliable tools that teams can actually use to make decisions. I operate at the intersection of product, data, and system logic, translating business needs into structured, usable functionality.
 `;
 
 export const aboutHighlights = [
   [
     "Systems Thinking",
-    "I approach platform problems structurally, focusing on how logic, configuration, reporting, and usability work together inside a system.",
+    "I design systems that remain stable, scalable, and consistent under real operational pressure.",
   ],
   [
     "Product Contribution",
-    "I contribute to the design and evolution of internal tools and a new Revenue Management System (RMS), with emphasis on dashboards, reporting logic, future forecasting functionality, and usability improvements.",
+    "I define what should be built, why it matters, and how it aligns with business goals.",
   ],
   [
     "Analytical Rigor",
-    "My academic background in physics shapes the way I work: analytically, methodically, and with strong attention to precision and validation.",
+    "I ensure data is validated, consistent, and reliable before decisions are made on top of it.",
   ],
 ].map(([title, text]) => ({ title, text }));
 
@@ -42,21 +39,17 @@ export const experience = [
     title: "Data-driven Product Specialist",
     org: "RevitUp",
     summary:
-      "Leading the evolution of internal reporting and revenue systems, with a focus on product-oriented system improvements, reporting automation, configuration logic, developer coordination, and user-facing functionality.",
+      "Leading the evolution of internal reporting and revenue systems, with a focus on data reliability, product logic, reporting structures, and system functionality used in real operational environments.",
     bullets: [
+      "Led the evolution of internal reporting systems used across ~100 active projects",
+      "Improved product reliability by identifying and resolving critical data issues (e.g. ~30% revenue discrepancies), restoring trust in system outputs",
+      "Defined reporting logic, KPIs, and system functionality aligned with business needs",
+      "Coordinated development priorities and guided system evolution across product and engineering",
+      "Introduced structured workflows (ticketing, task tracking, version control), reducing interruptions and improving delivery efficiency",
       "Defined and translated business requirements into system features, guiding development priorities and implementation",
-      "Led the development team’s work on Revelier by defining priorities, coordinating implementation, and guiding system evolution",
-      "Contributed to product development of internal reporting and revenue systems by defining reporting logic, feature behavior, and system functionality",
-      "Contributed to the development of a Revenue Management System (RMS), defining reporting logic, dashboards, and system functionality, including future features",
+      "Contributed to the development of a Revenue Management System (RMS), defining reporting logic, dashboards, and functional requirements",
       "Led system configuration and contributed to migration rollout, enabling adoption across ~30 projects initially and supporting scale-up to ~100 active projects",
-      "Contributed to the evolution of the platform from separate reporting systems (~40 projects) to a unified solution supporting ~100 active projects",
-      "Improved product reliability by identifying and resolving critical data issues (e.g. ~30% revenue discrepancies), restoring system trust and enabling full adoption",
-      "Defined reporting requirements, KPIs, and dashboard structures aligned with business needs",
       "Drove product adoption by improving usability, reducing manual workflows, and aligning system functionality with user needs",
-      "Introduced structured workflows (ticketing, task tracking, version control), reducing interruptions (~90%) and improving delivery efficiency",
-      "Supported reporting and analytics operations across ~40 hotel projects (Platforms 1 & 2), prior to platform consolidation and scale-up",
-      "Collaborated with stakeholders to translate business needs into reporting outputs",
-      "Assisted in migration from Excel-based workflows to structured reporting systems",
       "Performed data validation and ensured reporting accuracy across multiple data sources",
       "Guided system improvements by identifying issues, defining solutions, and aligning development work with operational needs",
     ],
@@ -115,20 +108,20 @@ export const experience = [
 
 export const projects = [
   {
-    title: "Revelier Platform Development",
-    text: "Contributed to the ongoing development of Revelier through reporting improvements, configuration logic, usability enhancements, and structured system refinement aligned with operational needs.",
+    title: "Revelier Platform",
+    text: "Led the evolution of an internal BI platform used across 100+ hotel accounts, focusing on data reliability, reporting logic, and system usability. Transformed the platform into a trusted system used for daily operational decisions.",
   },
   {
     title: "Reporting Logic & Automation",
-    text: "Designed reporting structures and automated workflows that improved consistency, reduced manual effort, and supported decision-making in hospitality environments.",
+    text: "Designed reporting structures and automated workflows that reduced manual reporting effort and improved consistency across projects, enabling faster and more reliable decision-making.",
   },
   {
     title: "System Reliability & Data Validation",
-    text: "Supported validation, debugging, and configuration processes to improve reporting accuracy, resolve system issues, and strengthen trust in platform outputs.",
+    text: "Identified and resolved critical data inconsistencies, eliminating the need for manual cross-checking and restoring trust in system outputs through stronger validation logic.",
   },
   {
     title: "RMS Functional Design",
-    text: "Contributed to the functional design of a Revenue Management System, focusing on dashboards, reporting logic, forecasting capabilities, and usability improvements.",
+    text: "Contributed to the functional design of a Revenue Management System, defining dashboards, reporting logic, and forecasting-related structures aligned with real operational and strategic needs.",
   },
 ];
 
@@ -163,26 +156,6 @@ export const publications = [
     doi: "10.1039/D0QM00707B",
     href: "https://doi.org/10.1039/D0QM00707B",
   },
-  {
-    authors: "A.G.V. Terzidou, T. Nakagawa, N. Yoshikane, R. Rountou, J. Rix, O. Karabinaki, D. Christofilos, J. Arvanitidis, and K. Prassides",
-    title: "High-pressure Raman study of the alkaline-earth metal fulleride, Ca2.75C60",
-    journal: "Modern Physics Letters B",
-    volume: "34",
-    pages: "2040056-2040066",
-    year: "2020",
-    doi: "10.1142/S0217984920400564",
-    href: "https://doi.org/10.1142/S0217984920400564",
-  },
-  {
-    authors: "Z. Vryzas, V. Zaspalis, L. Nalbantian, A. Terzidou, and V.C. Kelessidis",
-    title: "Rheological and HP/HT fluid loss behavior of nano-based drilling fluids utilizing Fe3O4 nanoparticles",
-    journal: "Materials Today: Proceedings",
-    volume: "5",
-    pages: "27387-27396",
-    year: "2018",
-    doi: "10.1016/j.matpr.2018.09.056",
-    href: "https://doi.org/10.1016/j.matpr.2018.09.056",
-  },
 ];
 
 export const oralPresentations = [
@@ -207,27 +180,6 @@ export const oralPresentations = [
     location: "Patras, Greece",
     date: "11-14 September 2019",
   },
-  {
-    authors: "A. Terzidou, V. Zaspalis, Z. Vryzas, V.C. Kelessidis, and L. Nalbantian",
-    title: "Optimization of drilling fluids utilizing nanoparticles",
-    event: "Panhellenic Conference of Chemical Engineering",
-    location: "Thessaloniki, Greece",
-    date: "25-27 May 2017",
-  },
-  {
-    authors: "Z. Vryzas, V. Zaspalis, L. Nalbantian, and A. Terzidou",
-    title: "Development of smart drilling fluids using Fe3O4 nanoparticles for the optimization of drilling",
-    event: "Panhellenic Conference of Chemical Engineering",
-    location: "Thessaloniki, Greece",
-    date: "25-27 May 2017",
-  },
-  {
-    authors: "V.C. Kelessidis, Z. Vryzas, V. Zaspalis, L. Nalbantian, and A. Terzidou",
-    title: "Advances in development of nano-based drilling fluids for optimizations in Hydrocarbon exploration",
-    event: "14th International Conference on NanoSciences & Nanotechnologies",
-    location: "Thessaloniki, Greece",
-    date: "4-7 July 2017",
-  },
 ];
 
 export const posterPresentations = [
@@ -249,15 +201,6 @@ export const posterPresentations = [
     doi: "",
     href: "",
   },
-  {
-    authors: "M. Sall, N. Chandran, A. Terzidou, C.B. Lioutas, and E.K. Polychroniadis",
-    title: "TEM Characterization of a Complex Twinning System in 3C-SiC",
-    event: "2nd International Multidisciplinary Microscopy and Microanalysis Congress & Exhibition (InterM)",
-    location: "Oludeniz, Turkey",
-    date: "16-19 October 2014",
-    doi: "10.1007/978-3-319-16919-4",
-    href: "https://doi.org/10.1007/978-3-319-16919-4",
-  },
 ];
 
 export const volunteering = [
@@ -268,28 +211,10 @@ export const volunteering = [
     location: "",
   },
   {
-    title: "Playing with light, understanding its behavior and... vanishing objects!",
-    organization: "Aristotle University of Thessaloniki on Sundays",
-    date: "6-13 May 2018",
-    location: "Thessaloniki, Greece",
-  },
-  {
     title: "Open Astronomy",
     organization: "Dionysus AstroFestival",
     date: "13 August 2016",
     location: "Dionysiou Bay, Chalkidiki, Greece",
-  },
-  {
-    title: "12th International Conference, Nanosciences & Nanotechnologies",
-    organization: "",
-    date: "07-10 July 2015",
-    location: "Thessaloniki, Greece",
-  },
-  {
-    title: "9th International Summer School, N&N: Electronics & Nanomedicine",
-    organization: "",
-    date: "04-11 July 2015",
-    location: "Thessaloniki, Greece",
   },
 ];
 
@@ -312,84 +237,6 @@ export const seminars = [
     location: "Chania, Greece",
     organization: "",
   },
-  {
-    title: "International Summer School, Natural Products: Chemistry, Biological Activities & Technological Applications",
-    date: "27-29 April 2018",
-    location: "Thessaloniki, Greece",
-    organization: "",
-  },
-  {
-    title: "Μαθησιακές Δυσκολίες και Αντιμετώπιση (για παιδιά) (online)",
-    date: "29 Νοεμβρίου-19 Δεκεμβρίου 2017",
-    location: "Λαμία, Ελλάδα",
-    organization: "",
-  },
-  {
-    title: "Digital Learning: Current Trends in Language Education Technology 2017-2020 and how we can keep our schools innovative",
-    date: "2017",
-    location: "11th Foreign Languages Forum",
-    organization: "by Michael Carrier",
-  },
-  {
-    title: "The special learning difficulties in teaching a foreign language",
-    date: "2017",
-    location: "11th Foreign Languages Forum",
-    organization: "by Dr Eleni Livaniou",
-  },
-  {
-    title: "Dealing with Discipline Problems: ten practical tips",
-    date: "2017",
-    location: "11th Foreign Languages Forum",
-    organization: "by Dr. Luke Prodromou",
-  },
-  {
-    title: "12th International Conference, Nanosciences & Nanotechnologies",
-    date: "07-10 July 2015",
-    location: "Thessaloniki, Greece",
-    organization: "",
-  },
-  {
-    title: "9th International Summer School, N&N: Electronics & Nanomedicine",
-    date: "04-11 July 2015",
-    location: "Thessaloniki, Greece",
-    organization: "",
-  },
-  {
-    title: "Effective Thinking Through Mathematics",
-    date: "2014",
-    location: "University of Texas, MOOC on edx.org",
-    organization: "",
-  },
-  {
-    title: "The Science of Everyday Thinking",
-    date: "2014",
-    location: "University of Queensland, MOOC on edx.org",
-    organization: "",
-  },
-  {
-    title: "Reason & Persuasion: Thinking through three dialogues of Plato",
-    date: "2014",
-    location: "National University of Singapore, MOOC on Coursera.org",
-    organization: "",
-  },
-  {
-    title: "Vital Signs: Understanding What the Body Is Telling Us",
-    date: "2014",
-    location: "University of Pennsylvania, MOOC on Coursera.org",
-    organization: "",
-  },
-  {
-    title: "10th International Conference, Nanosciences & Nanotechnologies",
-    date: "09-12 July 2013",
-    location: "Thessaloniki, Greece",
-    organization: "",
-  },
-  {
-    title: "7th International Summer School, N&N: Organic Electronics & Nanomedicine",
-    date: "06-13 July 2013",
-    location: "Thessaloniki, Greece",
-    organization: "",
-  },
 ];
 
 export const talks = [
@@ -400,7 +247,7 @@ export const talks = [
     date: "October 2025",
     location: "Crete, Greece",
     description:
-      "Presented at the 5th Revenue Masterclass Crete 2025, focusing on transforming data into business value through BI systems.",
+      "Presentation on how BI systems translate data into operational decisions in revenue management environments.",
     link: "https://www.revenue-masterclass.com/en/events/5th-revenue-masterclass-crete-2025",
   },
 ];
